@@ -1,0 +1,18 @@
+<li class="box visible">
+    <perch:if not-exists="youtube">
+        <a href="<perch:gallery id="normal" />" class="glightbox imageContainer" data-glightbox="title:<perch:gallery id="imageAlt" />">
+            <img src="<perch:gallery id="small" />" alt="<perch:gallery id="imageAlt" />" data-subtext="<perch:gallery id="imageAlt" />" />
+            <div class="overlayImage">
+                <h2><perch:gallery id="imageAlt" /></h2>
+            </div>
+        </a>
+    </perch:if>
+    <perch:if exists="youtube">
+        <a href="https://www.youtube.com/embed/<perch:gallery id="youtube" />" class="glightbox videoContainer" data-glightbox="title:<perch:gallery id="imageAlt" />">
+            <img src="<perch:gallery id="small" />" alt="<perch:gallery id="imageAlt" />" data-subtext="<perch:gallery id="imageAlt" />"/>
+            <div class="overlayVideo">
+                <img src="/newElements/pictures/galleryVideo.png">
+            </div>
+        </a>
+    </perch:if>
+</li>

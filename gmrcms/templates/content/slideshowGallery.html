@@ -1,0 +1,26 @@
+<li>
+    <perch:if not-exists="youtube">
+        <img src="<perch:content type="image" id="image" label="Image" quality="85" width="1400" height="700" crop="true" />" />
+        <div class="slideGrid">
+            <p class="flex-caption">
+                <perch:content id="heading" type="text" label="Title" title="true" />
+            </p>
+            <p class="flex-caption-right">
+                <perch:content id="date" type="date" label="Date" format="d F Y" native />
+            </p>
+        </div>
+    </perch:if> 
+
+    <perch:if exists="youtube">
+        <iframe id="player_1" src="https://www.youtube.com/embed/<perch:content id="youtube" type="url" label="If Youtube video then just put the Youtube Video ID here. No picture is needed for videos!" title="true" />" width="1920" height="800" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <div class="slideGrid">
+            <p class="flex-caption">
+                <perch:content id="heading" type="text" label="Title" title="true" />
+            </p>
+            <p class="flex-caption-right">
+                <perch:content id="date" type="date" label="Date" format="d F Y" native />
+            </p>
+        </div>
+    </perch:if> 
+</li>
+

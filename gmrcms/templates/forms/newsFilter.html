@@ -1,0 +1,21 @@
+<perch:if exists="firstNews">
+    <perch:form id="filter whiteTransparent" method="get">
+        <div class="filterFunction" id="newsFilterFunction">
+            <div class="filterFunctionFromDate">
+                <perch:label class="blockFilter" for="dateNewsFrom">Filter by date between</perch:label>
+                <perch:input class="blockFilter" id="dateNewsFrom" type="date">
+            </div>
+            <div class="filterFunctionToDate">
+                <perch:label class="blockFilter" for="dateNewsTo">and</perch:label>
+                <perch:input class="blockFilter" id="dateNewsTo" type="date">
+            </div>
+            <div class="filterFunctionSearchByTerm">
+                <perch:label class="blockFilter" for="nameNews">or search by term</perch:label>
+                <perch:input class="blockFilter" id="nameNews" type="text">
+            </div>
+            <div class="filterFunctionButton">
+              <perch:input class="blockFilter gridContainer btn btn-sm animation whiteButton" type="submit" value="Filter" style="margin-top: 20px">
+            </div>
+        </div>
+    </perch:form>
+</perch:if>

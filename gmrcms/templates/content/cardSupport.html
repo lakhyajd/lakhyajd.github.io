@@ -1,0 +1,16 @@
+<div class="sharpCardSupportSup">
+    <div class="stripeSup">
+        <h1><perch:content id="cardTitle" label="Support Title" type="text" /></h1>
+    </div>
+    <img src="<perch:content id="tilePicture" label="Card Picture" type="image" width="300" />">
+    <div class="textCardSup">
+        <p><perch:content id="supportText" type="textarea" label="Support Text" html="true" editor="redactor"  /></p>
+    </div>
+    <div style="justify-content: center" id="paymentSup">
+        <h2><perch:content id="supportPrice" type="text" label="Support Price"/></h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="<perch:content id="PayPal" label="PayPal Number" type="text" />"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <p><br>
+            </p>
+        </form>
+    </div>
+</div>

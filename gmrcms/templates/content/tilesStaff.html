@@ -1,0 +1,19 @@
+<div class="tile">
+    <img src="<perch:content id="tilePicture" label="Picture" type="image" width="500" />">
+    <div class="textTileBackground">
+        <div class="textTile">
+            <h1 class="textTileStaff">
+                <perch:content id="tileName" label="Name" type="text" />
+            </h1>
+            <h2 class="textTileStaff">
+                <perch:content id="tileRole" label="Role" type="text" />
+            </h2>
+            <div class="tilemore" onclick="openNav('myNav<perch:content id="counter" label="This field must be left empty" type="hidden"><perch:content id="perch_item_index" label="This field must be left empty" type="hidden">')">Read Biography</div>
+        </div>
+    </div>
+    <div id="myNav<perch:content id="counter" label="This field must be left empty" type="hidden"><perch:content id="perch_item_index" label="This field must be left empty" type="hidden">" class="overlay-tile">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav<perch:content id="counter" label="This field must be left empty" type="hidden"><perch:content id="perch_item_index" label="This field must be left empty" type="hidden">')">&times;</a>
+          <p class="overlay-tile-header"><perch:content id="tileName" label="Name" type="text" /></p>
+          <p class="overlay-tile-content"><perch:content id="tileTextBack" label="Background" type="textarea" /></p>
+    </div>
+</div>

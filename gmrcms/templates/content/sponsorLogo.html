@@ -1,0 +1,8 @@
+<perch:if exists="picLogo">
+    <li>
+        <a target="_blank" href="<perch:content id="link" type="text" label="Link" />">
+            <img src="<perch:content type="image" id="picLogo" label="Logo" quality="70" width="150" height="75" crop="false" />" alt="<perch:content id="name" type="text" label="Name" suppress="true" />" >
+        </a>
+    </li>
+</perch:if>
+

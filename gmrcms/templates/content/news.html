@@ -1,0 +1,30 @@
+<div class="container">
+    <perch:content id="slug" type="slug" for="nameNews" suppress="true" />
+    <div style="text-align: center;">
+        <img src="<perch:content id="tilePicture" label="Card Picture" type="image" height="700" width="1600" />">
+    </div>
+    <div class="whiteCaption">
+        <h2><perch:content id="dateNews" label="Date" type="date" format="d F Y" /></h2>
+    </div>
+    <div class="whiteCaption">
+    <h1><perch:content id="nameNews" label="Title" type="text" required="true" title="true" /></h1>
+    </div>
+    <div class="text" style="background: rgba(255, 255, 255, 0.9);">
+        <perch:content id="tileTextLong" label="Long Description" type="textarea" html="true" editor="redactor"/>
+
+        <perch:if not-exists="home">
+            <p><a href="http://localhost/newelements/news.php">See all news</a></p>
+        </perch:if>
+        <perch:if exists="home">
+            <p><a href="http://localhost/newelements/index.php">Go back to Home</a></p>
+        </perch:if>
+
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+          <a class="addthis_button_facebook"></a>
+          <a class="addthis_button_twitter"></a>
+          <a class="addthis_button_email"></a>
+        </div>
+
+    </div>
+    <div class="headerSpace"></div>
+</div>

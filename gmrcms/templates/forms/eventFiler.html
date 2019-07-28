@@ -1,0 +1,29 @@
+<perch:form id="filter" method="get">
+    <div class="filterWidth">
+        <perch:if id="mode" value="new">
+            <a href="http://localhost/newelements/events.php?new=1" class="btn btn-sm animation blueButton filterButtons">Upcoming Events</a>
+            <a href="http://localhost/newelements/events.php?old=1" class="btn btn-sm animation whiteButton filterWhiteButton filterButtons">Archive</a>
+        </perch:if>
+        <perch:if id="mode" value="old">
+            <a href="http://localhost/newelements/events.php?new=1" class="btn btn-sm animation whiteButton filterWhiteButton filterButtons">Upcoming Events</a>
+            <a href="http://localhost/newelements/events.php?old=1" class="btn btn-sm animation blueButton filterButtons">Archive</a>
+        </perch:if>
+    </div>
+    <div class="filterFunction">
+      <div class="Filterblock1">
+        <perch:label for="dateEvent">Filters</perch:label>
+        <perch:input id="dateEvent" type="date">
+      </div>
+      <div class="Filterblock2">
+        <perch:label for="nameEvent">Event name</perch:label>
+        <perch:input id="nameEvent" type="text">
+      </div>
+        <perch:input type="submit" value="Filter" class="btn btn-sm animated-button whiteButton">
+        <perch:if id="mode" value="new">
+            <perch:input type="hidden" id="new" value="1">
+        </perch:if>
+        <perch:if id="mode" value="old">
+            <perch:input type="hidden" id="old" value="1">
+        </perch:if>
+    </div>
+</perch:form>

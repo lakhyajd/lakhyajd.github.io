@@ -1,0 +1,22 @@
+<perch:content id="slug" type="slug" for="nameEvent" suppress="true" />
+    <div class="roundCard">
+        <img src="<perch:content id="tilePicture" label="Picture" type="image" />">
+        <div class="textCard">
+            <h1 style="display: inline;"><perch:content id="nameEvent" label="Title" type="text" required="true" title="true"/></h1>
+            <h2><perch:content id="tileSubTitle" label="Subtitle" type="text" /></h2>
+            <p><b><perch:content id="tileAddress" label="Address" type="text" /></b></p>
+            <perch:if id="dateEvent" match="gte" value="{today}">
+                <p class="noPadding"><b><perch:content id="dateEvent" label="Date" type="date" format="d F Y" /> at <perch:content id="tileTime" label="Event Time" type="text" /></b></p>
+            </perch:if>
+            <perch:if id="dateEvent" match="lt" value="{today}">
+                <p class="noPadding" style="color: red;"><b><perch:content id="dateEvent" label="Date" type="date" format="d F Y" /> at <perch:content id="tileTime" label="Event Time" type="text" /> (This event has concluded)</b></p>
+            </perch:if>
+            <p class="noPadding"><perch:content id="tilePrice" label="Price" type="text" /></p>
+            <p><perch:content id="tileText" label="Short Description" type="textarea" html="true" editor="redactor" /></p>
+            <div class="tilemore"><a href="http://localhost/newelements/events.php?s=<perch:content id="slug" type="slug" for="heading" />"><h1>Read More</h1></a></div>
+            <perch:if not-exists="tileText">
+                <perch:content id="tileTextLong" label="Long Description" type="textarea" html="true" editor="redactor"/>
+            </perch:if>
+        </div>
+    </div>
+<div class="headerSpace"></div>

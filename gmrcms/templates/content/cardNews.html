@@ -1,0 +1,45 @@
+<perch:if not-exists="home">
+    <perch:content id="slug" type="slug" for="nameNews" suppress="true" />
+    <div class="sharpCardNews">
+        <img src="<perch:content id="tilePicture" label="Card Picture" type="image" height="700" width="1600" />">
+        <div class="textCardNews">
+            <h1><perch:content id="dateNews" label="Date" type="date" format="d F Y" /></h1>
+            <h2><perch:content id="nameNews" label="Title" type="text" required="true" title="true" /></h2>
+            <p><perch:content id="tileText" label="Short Description" type="textarea" required="true" /></p>
+            <div class="tilemore"><a href="?s=<perch:content id="slug" type="slug" for="heading" />"><h1>Read More</h1></a></div>
+            <perch:if not-exists="tileText">
+                <perch:content id="tileTextLong" label="Long Description" type="textarea" html="true" editor="redactor"/>
+            </perch:if>
+        </div>
+    </div>
+    <div class="headerSpace"></div>
+</perch:if>
+
+<perch:if exists="home">
+    <li>
+        <a href="/newelements/news.php?s=<perch:content id="slug" type="slug" for="heading" />&home=yes">
+            <img src="<perch:content id="tilePicture" label="Picture" type="image" height="500" width="1600" />">
+            <div class="slideGrid">
+                <p class="flex-caption">
+                    <perch:content id="nameNews" label="Title" type="text" />
+                </p>
+                <p class="flex-caption-right">
+                    <perch:content id="dateNews" label="Date" type="date" format="d F Y" />
+                </p>
+            </div>
+        </a>
+    </li>
+</perch:if>
+
+<perch:noresults>
+    <div class="headerSpace"></div>
+    <div class="headerSpace"></div>
+    <div class="text">
+        <div class="container" id="nothingFound" style="text-align: center">
+            <p>Oops! We couldn’t find what you’re look for. You can reset the filter by clicking the reset button.</p>
+            <a href="http://localhost/newelements/news.php" class="btn btn-sm animation blueButton">Reset</a>
+        </div>
+    </div>
+    <div class="headerSpace"></div>
+    <div class="headerSpace"></div>
+</perch:noresults>
