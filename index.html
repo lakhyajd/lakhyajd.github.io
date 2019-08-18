@@ -1,7 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   <meta http-equiv="refresh" content="0;url=index.php">
-   </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Test Doc</title>
+</head>
+
+<body>
+    <div class="body">
+        <div id="gap1"></div>
+        <div id="gap2"></div>
+        <div id="gap3"></div>
+        <div class="game">
+            <div>
+                <h1 id="welcome">Guess The Number</h1>
+                <div class="textInGame">
+                    <h3> Think of any number between 1 and 10:</h3>
+                    <input id="inputbox" type="number" placeholder="Type A Number">
+                    <button type="button" id="clickButton" onclick="process()">Submit</button>
+
+                </div>
+                <div id="gap4"></div>
+
+                <p id="outbox"></p>
+                <script src="js/behave.js" charset="utf-8"></script>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
