@@ -1,3 +1,8 @@
+@font-face {
+    font-family: OrkneyRegular;
+    src: url('fonts/orkney-regular.otf');
+}
+
 #welcome {
     color: teal;
 }
@@ -34,4 +39,5 @@
 .game {
     grid-column: 2/3;
     border-color: teal;
+    font-family: OrkneyRegular;
 }

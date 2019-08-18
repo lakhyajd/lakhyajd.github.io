@@ -17,7 +17,7 @@ function process() {
 
             }
         } else {
-            document.getElementById("outbox").innerHTML = "All attempts are over. Please refresg this page and try again.";
+            document.getElementById("outbox").innerHTML = "All attempts are over. Please refresh this page and try again.";
         }
     } else {
         document.getElementById("outbox").innerHTML = "Please enter a number between 1 and 10 only."
